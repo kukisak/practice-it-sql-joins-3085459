@@ -1,3 +1,4 @@
+.open AdventureWorks.db
 .mode html
 .output adventureworks_docs.html
 .headers on
