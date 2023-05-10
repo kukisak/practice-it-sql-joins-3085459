@@ -6,6 +6,6 @@ where EmailAddress like '%a%@adventure-works.com';
 
 drop view customer_address_us;
 create view customer_address_us AS
-SELECT CustomerKey, AddressLine1, AddressLine2, GeographyKey from DimCustomer C
+SELECT CustomerKey, AddressLine1, AddressLine2, C.GeographyKey from DimCustomer C
 JOIN DimGeography G ON C.GeographyKey = G.GeographyKey
 WHERE CountryRegionCode = 'US';
